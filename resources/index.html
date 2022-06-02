@@ -99,6 +99,11 @@
 			display: inline-block;
 		}
 
+		picture {
+			float: left;
+			margin: var(--space) var(--space) 0 0;
+		}
+
 		p {
 			text-align: justify;
 		}
@@ -120,7 +125,11 @@
 
 <body>
 	<header>
-		<h1>Daniele Ambrosino</h1>
+		<h1>
+			Daniele Ambrosino
+			<br>
+			<small>Software Engineer</small>
+		</h1>
 		<address>
 			<a href="mailto:mail@danieleambrosino.it">mail@danieleambrosino.it</a>
 		</address>
@@ -138,6 +147,14 @@
 	<main>
 		<section id="about">
 			<h2>Chi sono</h2>
+			<picture>
+				<source srcset="/images/profile-144.avif 144w, /images/profile-240.avif 240w"
+					sizes="(max-width: 768px) 144px, 240px" type="image/avif">
+				<source srcset="/images/profile-144.webp 144w, /images/profile-240.webp 240w"
+					sizes="(max-width: 768px) 144px, 240px" type="image/webp">
+				<img srcset="/images/profile-144.jpeg 144w, /images/profile-240.jpeg 240w"
+					sizes="(max-width: 768px) 144px, 240px" src="/images/profile-240.jpeg" alt="Immagine ritraente il volto di Daniele Ambrosino.">
+			</picture>
 			<p>
 				Fin da piccolo non mi è mai piaciuto limitarmi ad utilizzare qualcosa, ma ho sempre preteso di
 				comprenderne appieno il funzionamento.
