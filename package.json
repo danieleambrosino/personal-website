@@ -1,5 +1,5 @@
 {
-	"dependencies": {
+	"devDependencies": {
 		"html-minifier": "^4.0.0"
 	},
 	"scripts": {
