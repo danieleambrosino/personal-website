@@ -1,0 +1,10 @@
+name: build-html
+on: [push]
+jobs:
+  build-html:
+    steps:
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: latest
+        run: pnpm install
+        run: pnpm run build:html
