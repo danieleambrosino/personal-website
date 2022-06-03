@@ -114,8 +114,19 @@
 			text-align: justify;
 		}
 
+		section li {
+			margin-block-end: var(--space);
+		}
+
 		time {
 			font-size: smaller;
+		}
+
+		footer {
+			border-block-start: 1px solid var(--color-text);
+			text-align: center;
+			font-size: small;
+			padding: var(--space);
 		}
 	</style>
 </head>
@@ -186,8 +197,10 @@
 					<h3>Senior Software Engineer</h3>
 					<div>Amore &amp; Vasaturo</div>
 					<time datetime="2022-01">gennaio 2022</time> - <time>oggi</time>
-					<p>Software architect e sviluppatore; reviewer di performance, architettura e sicurezza; tutor di
-						una risorsa junior.</p>
+					<p>
+						Software architect e sviluppatore; reviewer di performance, architettura e sicurezza; tutor di
+						una risorsa junior.
+					</p>
 				</li>
 				<li>
 					<h3>Chief Technology Officer</h3>
@@ -253,35 +266,50 @@
 
 		<section id="skills">
 			<h2>Competenze</h2>
-			<ul>
-				<li>HTML</li>
-				<li>CSS</li>
-				<li>JavaScript</li>
-				<li>PHP</li>
-				<li>MySQL</li>
-				<li>WordPress</li>
-				<li>Git</li>
-				<li>SASS</li>
-				<li>Laravel</li>
-				<li>React</li>
-				<li>Vue</li>
-				<li>Node.js</li>
-				<li>Express</li>
-				<li>MongoDB</li>
-				<li>Python</li>
-				<li>Django</li>
-				<li>Flask</li>
-				<li>Docker</li>
-				<li>GitHub</li>
-				<li>GitLab</li>
-				<li>GitKraken</li>
-				<li>GitFlow</li>
-				<li>GitHub Pages</li>
-				<li>GitLab Pages</li>
-				<li>GitLab CI</li>
-			</ul>
+
+			<h3>Backend</h3>
+			<p>
+				Ho grande dimestichezza con il linguaggio <em>PHP</em>, avendolo usato per sviluppare innumerevoli
+				progetti.
+				I framework con cui ho lavorato con maggiore frequenza sono <em>Symfony</em> e <em>Laravel</em>.
+				<br>
+				Conosco bene l'ecosistema di <em>NodeJS</em>, ho usato <em>Express</em> per svariati progetti ed
+				ultimamente ho
+				usato il runtime <em>Deno</em> per alcuni piccoli software.
+				<br>
+				Ho utilizzato anche <em>Java</em> principalmente per lo sviluppo di API, in particolare sfruttando
+				il framework <em>Spring</em>.
+			</p>
+			<p>
+				I DBMS con cui ho lavorato maggiormente sono <em>PostgreSQL</em> e <em>MySQL</em>, ma in più di
+				un'occasione ho utilizzato anche <em>SQLite</em> per piccoli progetti e sistemi embedded.
+				<br>
+				Mi è capitato di usare come sistema di persistenza anche <em>Redis</em> per alcune applicazioni
+				collaborative real-time.
+			</p>
+			<p>
+				Conosco molto bene le Bot API di Telegram, avendo sviluppato diversi bot.
+			</p>
+
+			<h3>Frontend</h3>
+			<p>
+				<em>HTML</em>, <em>CSS</em> e <em>JavaScript</em> non possono mancare nel bagaglio di conoscenze di uno sviluppatore web. Presto da
+				sempre molta attenzione alla semantica degli elementi HTML utilizzati, e cerco sempre di essere quanto
+				più aggiornato possibile sulle nuove introduzioni in questi linguaggi.
+				<br>
+				Sostengo fermamente che nel web di oggi ci sia <strong>decisamente</strong> troppo JavaScript (infatti
+				in questa pagina non ce n'è affatto!), e che noi sviluppatori dobbiamo essere più consapevoli delle
+				tecnologie web attuali per evitare di usare impropriamente gli strumenti a nostra disposizione.
+			</p>
+			<p>
+				Per alcuni progetti ad alta interattività, ho usato il framework <em>Svelte</em>.
+			</p>
 		</section>
 	</main>
+
+	<footer>
+		&copy; Daniele Ambrosino 2022. P. IVA 07161690487
+	</footer>
 </body>
 
 </html>
