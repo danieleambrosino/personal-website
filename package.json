@@ -3,6 +3,6 @@
 		"html-minifier": "^4.0.0"
 	},
 	"scripts": {
-		"build:html": "html-minifier --collapse-boolean-attributes --collapse-inline-tag-whitespace --collapse-whitespace --minify-css --minify-js --remove-attribute-quotes --remove-comments --remove-tag-whitespace resources/index.html --output public/index.html"
+		"build:html": "html-minifier --collapse-boolean-attributes --collapse-whitespace --minify-css --minify-js --remove-attribute-quotes --remove-comments --remove-tag-whitespace resources/index.html --output public/index.html"
 	}
 }
