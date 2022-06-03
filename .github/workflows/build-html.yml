@@ -2,6 +2,7 @@ name: build-html
 on: [push]
 jobs:
   build-html:
+    runs-on: ubuntu-latest
     steps:
       - uses: pnpm/action-setup@v2.2.2
         with:
