@@ -1,6 +1,11 @@
 danieleambrosino.it {
 	root * /var/www/vhosts/danieleambrosino.it/www/public
 
+	file_server {
+		index en.html
+		precompressed br
+	}
+
 	@assets {
 		path_regexp \.(?:woff2|avif|webp|jpeg|svg)$
 	}
@@ -12,10 +17,6 @@ danieleambrosino.it {
 	}
 	file_server @italian {
 		index it.html
-		precompressed br
-	}
-	file_server {
-		index en.html
 		precompressed br
 	}
 
