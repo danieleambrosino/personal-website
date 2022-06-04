@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Daniele Ambrosino's personal website.">
+	<title>Daniele Ambrosino</title>
+	<link rel="shortcut icon" href="icon.svg" type="image/svg+xml">
+	<style>
+		@font-face {
+			font-family: 'Raleway';
+			font-style: normal;
+			font-weight: 100 900;
+			font-display: swap;
+			src: url(/fonts/Raleway.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		@font-face {
+			font-family: 'Raleway';
+			font-style: italic;
+			font-weight: 400;
+			font-display: swap;
+			src: url(/fonts/RalewayItalic.woff2) format('woff2');
+			unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+		}
+
+		:root {
+			--space: 1rem;
+			--nav-height: 6.5ex;
+			--breakpoint: 768px;
+			--color-dark: hsl(180, 100%, 5%);
+			--color-light: hsl(180, 100%, 75%);
+
+			font-family: 'Raleway', sans-serif;
+			font-size: 1.3rem;
+
+			background-color: var(--color-background);
+			color: var(--color-text);
+
+			scroll-behavior: smooth;
+			scroll-padding-top: var(--nav-height);
+		}
+
+		@media (prefers-color-scheme: dark) {
+			:root {
+				--color-background: var(--color-dark);
+				--color-text: var(--color-light);
+			}
+		}
+
+		@media (prefers-color-scheme: light) {
+			:root {
+				--color-background: var(--color-light);
+				--color-text: var(--color-dark);
+			}
+		}
+
+		body {
+			max-width: var(--breakpoint);
+			margin: auto;
+			padding: var(--space);
+		}
+
+		h1,
+		h2,
+		h3 {
+			margin: 0;
+		}
+
+		a {
+			color: inherit;
+		}
+
+		nav {
+			position: sticky;
+			top: 0;
+			background-color: var(--color-background);
+		}
+
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			display: flex;
+			gap: var(--space);
+			align-items: center;
+			height: var(--nav-height);
+
+			overflow-x: auto;
+		}
+
+		nav ul li {
+			flex-shrink: 0;
+		}
+
+		nav ul li a {
+			display: inline-block;
+		}
+
+		picture {
+			float: left;
+			margin: var(--space) var(--space) 0 0;
+		}
+
+		p {
+			text-align: justify;
+			line-height: 1.5em;
+		}
+
+		section li {
+			margin-block-end: var(--space);
+		}
+
+		time {
+			font-size: smaller;
+		}
+
+		footer {
+			border-block-start: 1px solid var(--color-text);
+			text-align: center;
+			font-size: small;
+			padding: var(--space);
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>
+			Daniele Ambrosino
+			<br>
+			<small>Software Engineer</small>
+		</h1>
+		<address>
+			<a href="mailto:mail@danieleambrosino.it">Email</a>
+			•
+			<a target="_blank" href="https://github.com/danieleambrosino">GitHub</a>
+			•
+			<a target="_blank" href="https://www.linkedin.com/in/daniele-ambrosino/">LinkedIn</a>
+		</address>
+	</header>
+
+	<nav>
+		<ul>
+			<li><a href="#about">About</a></li>
+			<li><a href="#experience">Experience</a></li>
+			<li><a href="#education">Education</a></li>
+			<li><a href="#skills">Skills</a></li>
+		</ul>
+	</nav>
+
+	<main>
+		<section id="about">
+			<h2>Chi sono</h2>
+			<picture>
+				<source srcset="/images/profile.avif" type="image/avif">
+				<source srcset="/images/profile.webp" type="image/webp">
+				<img src="/images/profile.jpeg" width="144" height="144" alt="Profile photo by Daniele Ambrosino.">
+			</picture>
+			<p>
+				I have always liked to understand how things work down to the smallest detail, and for this reason I
+				began very early to disassemble computers and "fiddle" with Linux-based operating systems, accumulating
+				the OS knowledge that I still use daily.
+				<br>
+				With the university I approached programming in a systematic way and, in parallel with the study, I
+				began to explore the world of web application development, working as a freelancer.
+			</p>
+			<p>
+				Over time I realized that what I am really passionate about is the possibility of giving concreteness to
+				ideas by designing systems in the simplest, most essential, elegant and solid way possible, both in the
+				backend and in the frontend, taking care of every detail of development, from attention to performance
+				and best practice to rigor in cleaning the code.
+				<br>
+				This web page is a good manifesto of the essentiality and attention to detail that I care so much ☺
+				<br>
+				<small>Feel free to peek into the source code!</small>
+			</p>
+			<p>
+				For some years, also thanks to the CyberChallenge.IT project, I discovered the world of cybersecurity
+				and I started playing CTF competitions, an extremely stimulating activity not only for the possibility
+				of proactively discovering the functioning and implementation details of many technologies, but also to
+				exploit (and expand) the transversal knowledge of operating systems, networking and programming,
+				encouraging an holistic approach.
+			</p>
+		</section>
+
+		<section id="experience">
+			<h2>Experiences</h2>
+			<ul>
+				<li>
+					<h3>Winner of Mastertech 2019</h3>
+					<div>VarGroup</div>
+					<time datetime="2019-05-15">15/05/2019</time>
+					<p>National hackathon sponsored by Microsoft and Amazon.</p>
+				</li>
+				<li>
+					<h3>Senior Software Engineer</h3>
+					<div>Amore &amp; Vasaturo</div>
+					<time datetime="2022-01">January 2022</time> - <time>today</time>
+					<p>
+						Software architect and developer; performance, architecture and security reviewer; tutor of a
+						junior developer.
+					</p>
+				</li>
+				<li>
+					<h3>Chief Technology Officer</h3>
+					<div>Tipso</div>
+					<time datetime="2020-11">November 2020</time> - <time>today</time>
+					<p>Coordination, design and development of a fashion consulting app.</p>
+				</li>
+				<li>
+					<h3>Full Stack Developer</h3>
+					<div>Bidoo</div>
+					<time datetime="2020-05">May 2020</time> - <time datetime="2020-10">October 2020</time>
+					<p>
+						Development of an advanced e-commerce platform parallel to the auction system.
+					</p>
+				</li>
+				<li>
+					<h3>Software Architect</h3>
+					<div>Rankingoal</div>
+					<time datetime="2020-07">July 2020</time> - <time datetime="2021-01">January 2021</time>
+					<p>
+						Design, coordination and development of a SaaS platform for Search Engine Optimization.
+					</p>
+				</li>
+				<li>
+					<h3>Chairman of the Committee on Information Technology and Communication</h3>
+					<div>Rotaract District 2071</div>
+					<time datetime="2021-07">July 2021</time> - <time datetime="2022-07">July 2022</time>
+				</li>
+			</ul>
+		</section>
+
+		<section id="education">
+			<h2>Education</h2>
+			<ul>
+				<li>
+					<h3>
+						Master's Degree in Computer Science and Engineering
+						<br>
+						Cybersecurity Track
+					</h3>
+					<div>Polytechnic University of Milan</div>
+					<time datetime="2021-09">September 2021</time> - <time>oggi</time>
+				</li>
+				<li>
+					<h3>National finalist of <a target="_blank" href="https://cyberchallenge.it/">CyberChallenge.IT</a>
+					</h3>
+					<time datetime="2021-02">February 2021</time> - <time datetime="2021-07">July 2021</time>
+				</li>
+				<li>
+					<h3>Cyber Security Academy Student</h3>
+					<div>Polytechnic University of Milan</div>
+					<time datetime="2021-09">September 2021</time> - <time datetime="2022-01">January 2022</time>
+				</li>
+				<li>
+					<h3>Bachelor's Degree in Computer Engineering</h3>
+					<div>University of Florence</div>
+					<time datetime="2015">2015</time> - <time datetime="2021">2021</time>
+				</li>
+				<li>
+					<h3>Scientific High School Diploma</h3>
+					<div>Liceo Scientifico Statale Antonio Gramsci - Firenze</div>
+					<time datetime="2010">2010</time> - <time datetime="2015">2015</time>
+				</li>
+			</ul>
+		</section>
+
+		<section id="skills">
+			<h2>Competenze</h2>
+
+			<h3>Backend</h3>
+			<p>
+				I am very familiar with the PHP language, which I have used to develop countless projects. The
+				frameworks I've worked with most frequently are Symfony and Laravel.
+				<br>
+				I know the NodeJS ecosystem well, I have used Express for several projects and lately I have used the
+				Deno runtime for some small software.
+				<br>
+				I also used Java mainly for API development, especially with the Spring framework.
+			</p>
+			<p>
+				The DBMS I've worked with the most are PostgreSQL and MySQL, but on more than one occasion I've also
+				used SQLite for small projects and embedded systems.
+				<br>
+				I happened to use Redis as a persistence system for some real-time collaborative applications.
+			</p>
+			<p>
+				I know Telegram Bot APIs very well, having used them in different circumstances for the development of
+				chatbots.
+			</p>
+			<p>
+				I have had the opportunity to work extensively with Python not only in some projects related to AI, but
+				especially recently thanks to THE CTF, an area in which Python is the de facto scripting language of
+				choice; its conciseness makes it particularly suitable for systematically coding exploits, so knowing it
+				fluently is an almost indispensable requirement.
+			</p>
+
+			<h3>Frontend</h3>
+			<p>
+				HTML, CSS and JavaScript cannot be missing in the knowledge of a web developer. I pay close attention to
+				the semantics of HTML elements (also useful from an SEO perspective that is often overlooked), and I try
+				to be as up-to-date as possible on new introductions in these languages.
+				<br>
+				I strongly maintain that there is far too much JavaScript on today's web, and that we developers need to
+				be more aware of current web technologies to avoid misusing the tools at our disposal (there is not a
+				single line of JavaScript on this page!).
+			</p>
+			<p>
+				For some highly interactive projects, I used the Svelte framework.
+			</p>
+		</section>
+	</main>
+
+	<footer>
+		&copy; Daniele Ambrosino 2022
+		<br>
+		VAT code 07161690487
+	</footer>
+</body>
+
+</html>

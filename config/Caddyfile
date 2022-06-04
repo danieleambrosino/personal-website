@@ -1,0 +1,22 @@
+danieleambrosino.it {
+	root * /var/www/vhosts/danieleambrosino.it/www/public
+	encode gzip
+	@assets {
+		path_regexp \.(?:woff2|avif|webp|jpeg|svg)$
+	}
+	header @assets Cache-Control max-age=31536000
+	header Vary Accept-Language
+	@italian {
+		header Accept-Language it*
+	}
+	file_server @italian {
+		index it.html
+	}
+	file_server {
+		index en.html
+	}
+}
+
+www.danieleambrosino.it {
+	redir https://danieleambrosino.it{uri} permanent
+}
