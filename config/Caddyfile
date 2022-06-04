@@ -7,15 +7,16 @@ danieleambrosino.it {
 	header @assets Cache-Control max-age=31536000
 
 	header Vary Accept-Language
-	file_server {
-		index en.html
-		precompressed br
-	}
 	@italian {
 		header Accept-Language it*
 	}
 	file_server @italian {
 		index it.html
+		precompressed br
+	}
+	file_server {
+		index en.html
+		precompressed br
 	}
 
 	encode gzip
