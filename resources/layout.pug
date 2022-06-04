@@ -1,0 +1,54 @@
+doctype html
+html(lang=`${locale}`)
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Daniele Ambrosino
+		link(rel="shortcut icon" href="icon.svg" type="image/svg+xml")
+		style
+			include style.css
+	body
+		header
+			h1
+				| Daniele Ambrosino
+				br
+				small Software Engineer
+			address
+				a(href="mailto:mail@danieleambrosino.it") Email
+				|  • 
+				a(target="_blank" href="https://github.com/danieleambrosino") GitHub
+				|  • 
+				a(target="_blank" href="https://www.linkedin.com/in/daniele-ambrosino/") LinkedIn
+
+		nav
+			ul
+				li #[a(href='#about') #{__("about")}]
+				li #[a(href='#experience') #{__("experience")}]
+				li #[a(href='#education') #{__("education")}]
+				li #[a(href='#skills') #{__("skills")}]
+
+		main
+			section#about
+				h2= __("about")
+				picture
+					source(srcset='/images/profile.avif' type='image/avif')
+					source(srcset='/images/profile.webp' type='image/webp')
+					img(src='/images/profile.jpeg' width='144' height='144' alt='Foto profilo di Daniele Ambrosino.')
+				block about
+
+			section#experience
+				h2= __("experience")
+				block experience
+
+			section#education
+				h2= __("education")
+				block education
+
+			section#skills
+				h2= __("skills")
+				block skills
+
+		footer
+			| &copy; Daniele Ambrosino 2022
+			br
+			| #{__("vatCode")} 07161690487
