@@ -9,16 +9,18 @@ danieleambrosino.it {
 	@assets {
 		path_regexp \.(?:woff2|avif|webp|jpeg|svg)$
 	}
-	header @assets Cache-Control max-age=31536000
-
-	header Vary Accept-Language
 	@italian {
 		header Accept-Language it*
 	}
+
 	file_server @italian {
 		index it.html
 		precompressed br
 	}
+
+	header @assets Cache-Control max-age=31536000
+	header Vary Accept-Language
+	header Content-Security-Policy "default-src 'self'"
 
 	encode gzip
 }
