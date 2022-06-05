@@ -20,7 +20,7 @@ danieleambrosino.it {
 
 	header @assets Cache-Control max-age=31536000
 	header Vary Accept-Language
-	header Content-Security-Policy "default-src 'self'; style-src 'nonce-abcea822'"
+	header Content-Security-Policy "default-src 'self'; style-src 'sha256-jvrtqxWwFkMQwYsCRuYuoeMkzdl/QTFetCY9Ka8Wqx8='"
 
 	encode gzip
 }
