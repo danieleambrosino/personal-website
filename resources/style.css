@@ -26,6 +26,7 @@
 	font-family: 'Raleway', sans-serif;
 	font-size: 1.3rem;
 
+	color-scheme: dark light;
 	background-color: var(--color-background);
 	color: var(--color-text);
 
