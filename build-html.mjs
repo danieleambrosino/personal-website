@@ -39,7 +39,7 @@ function buildHtml(locales) {
 		const renderedHtml = renderHtml(locale);
 		const minifiedHtml = minifyHtml(renderedHtml);
 		writeFileSync(join(publicDir, `${locale}.html`), minifiedHtml);
-		if (index === 1) {
+		if (index === 0) {
 			updateCaddyfileStyleHash(minifiedHtml);
 		}
 
