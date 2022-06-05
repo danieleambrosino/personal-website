@@ -2,9 +2,9 @@ import { compress } from "brotli";
 import { readFileSync, writeFileSync } from "fs";
 import { minify } from "html-minifier";
 import { I18n } from "i18n";
+import { createHash } from "node:crypto";
 import { dirname, join } from "path";
 import { renderFile } from "pug";
-import { createHash } from "node:crypto";
 
 const rootDir = dirname(new URL(import.meta.url).pathname);
 const configDir = join(rootDir, "config");
