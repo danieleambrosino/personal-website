@@ -23,7 +23,7 @@
 	--color-dark: hsl(180, 100%, 5%);
 	--color-light: hsl(180, 100%, 75%);
 	--min-font-size: 1rem;
-	--pref-font-size: 2rem;
+	--pref-font-size: 3vw;
 	--max-font-size: 1.3rem;
 
 	font-family: 'Raleway', sans-serif;
