@@ -90,10 +90,6 @@ nav ul li {
 	flex-shrink: 0;
 }
 
-nav ul li a {
-	display: inline-block;
-}
-
 picture {
 	float: left;
 	margin: var(--space) var(--space) 0 0;
