@@ -18,13 +18,20 @@
 
 :root {
 	--space: 1rem;
-	--nav-height: 6.5ex;
-	--breakpoint: 768px;
+
 	--color-dark: hsl(180, 100%, 5%);
 	--color-light: hsl(180, 100%, 75%);
+
+	--color-background: var(--color-dark);
+	--color-text: var(--color-light);
+
 	--min-font-size: 1rem;
 	--pref-font-size: 3vw;
 	--max-font-size: 1.3rem;
+
+	--line-max-length: 55ch;
+
+	--nav-height: 6.5ex;
 
 	font-family: 'Raleway', sans-serif;
 	font-size: clamp(var(--min-font-size), var(--pref-font-size), var(--max-font-size));
@@ -37,13 +44,6 @@
 	scroll-padding-top: var(--nav-height);
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-background: var(--color-dark);
-		--color-text: var(--color-light);
-	}
-}
-
 @media (prefers-color-scheme: light) {
 	:root {
 		--color-background: var(--color-light);
@@ -52,7 +52,7 @@
 }
 
 body {
-	max-width: var(--breakpoint);
+	max-width: var(--line-max-length);
 	margin: auto;
 	padding: var(--space);
 }
@@ -92,7 +92,8 @@ nav ul li {
 
 picture {
 	float: left;
-	margin: var(--space) var(--space) 0 0;
+	margin-block-start: var(--space);
+	margin-inline-end: var(--space);
 }
 
 p {
