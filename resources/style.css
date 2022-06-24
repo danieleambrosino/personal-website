@@ -71,23 +71,18 @@ nav {
 	position: sticky;
 	top: 0;
 	background-color: var(--color-background);
-}
-
-nav ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-
 	display: flex;
-	gap: var(--space);
 	align-items: center;
 	height: var(--nav-height);
-
 	overflow-x: auto;
 }
 
-nav ul li {
+nav a {
 	flex-shrink: 0;
+}
+
+nav a:not(:first-child) {
+	margin-left: var(--space);
 }
 
 picture {

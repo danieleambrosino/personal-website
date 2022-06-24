@@ -22,11 +22,10 @@ html(lang=`${locale}`)
 				a(target="_blank" href="https://www.linkedin.com/in/daniele-ambrosino/") LinkedIn
 
 		nav
-			ul
-				li #[a(href='#about') #{__("about")}]
-				li #[a(href='#experience') #{__("experience")}]
-				li #[a(href='#education') #{__("education")}]
-				li #[a(href='#skills') #{__("skills")}]
+			a(href='#about') #{__("about")}
+			a(href='#experience') #{__("experience")}
+			a(href='#education') #{__("education")}
+			a(href='#skills') #{__("skills")}
 
 		main
 			section#about
