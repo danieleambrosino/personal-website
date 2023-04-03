@@ -1,17 +1,18 @@
 extends layout.pug
 block about
 	p
-		| I have always liked to understand how things work down to the smallest detail, and for this reason I began very early to disassemble computers and "fiddle" with Linux-based operating systems, developing the OS knowledge that I still use daily.
+		| I'm a software engineer with almost 8 years of experience in web development, with a particular passion for backend and infrastructures. In my career I have designed, developed and coordinated almost 100 projects, from the simplest showcase sites to complex commercial and management systems for large companies.
 		br
-		| With the university I approached programming in a systematic way and, in parallel with the study, I began to explore the world of web application development, working as a freelancer.
+		| I'm a maniac of detail, performance and best practices, always looking for new challenges to face, solutions to find and new technologies to experiment.
 	p
-		| Over time I realized that what I am really passionate about is the possibility of giving concreteness to ideas by designing systems in the simplest, most essential, elegant and solid way possible, both in the backend and in the frontend, taking care of every detail of development, from attention to performance and best practice to rigor in code cleanliness.
+		| My passion for Linux-based systems was born when I was in seventh grade and my father gave me his old Compaq laptop, on which I installed Ubuntu 8: since then I have never stopped fiddling with Linux systems (I use Arch btw).
 		br
-		| This web page is a good manifesto of the essentiality and attention to detail that I care so much ☺
-		br
-		small Feel free to peek into the #[a(href='https://github.com/danieleambrosino/personal-website' target='blank') source code]!
+		| Still today I manage and administer, both for customers and for personal use, various servers with different distros depending on the needs.
 	p
-		| For some years, also thanks to the #[a(href="https://cyberchallenge.it" target="_blank") CyberChallenge.IT] project, I discovered the world of cybersecurity and I started playing #[abbr(title="Capture The Flag") CTF] competitions, an extremely stimulating activity not only for the possibility of proactively discovering the functioning and implementation details of many technologies, but also to exploit (and expand) the transversal knowledge of operating systems, networking and programming, encouraging an holistic approach.
+		| I started programming in C as a self-taught in high school and, thanks to university, I learned new languages and became passionate about software engineering, code quality and database systems.
+		br
+		| Thanks to the #[a(target='_blank' href='https://cyberchallenge.it/') CyberChallenge.IT] project, I discovered the world of cybersecurity and started playing #[abbr(title='Capture The Flag') CTF] competitions. I am currently specializing in Cybersecurity at Politecnico di Milano.
+	p Do you have a project in mind that you would like to realize? #[a(href='mailto:mail@danieleambrosino.it') Contact me and let's talk about it together!]
 
 block experience
 	ul
@@ -53,44 +54,38 @@ block education
 				br
 				| Cybersecurity Track
 			div Polytechnic University of Milan
-			| #[time(datetime='2021-09') September 2021] - #[time today]
 		li
 			h3 National finalist of #[a(target='_blank' href='https://cyberchallenge.it/') CyberChallenge.IT]
-			| #[time(datetime='2021-02') February 2021] - #[time(datetime='2021-07') July 2021]
 		li
 			h3 Cyber Security Academy Student
 			div Polytechnic University of Milan
-			| #[time(datetime='2021-09') September 2021] - #[time(datetime='2022-01') January 2022]
 		li
 			h3 Bachelor's Degree in Computer Engineering
 			div University of Florence
-			| #[time(datetime='2015') 2015] - #[time(datetime='2021') 2021]
 		li
 			h3 Scientific High School Diploma
 			div Liceo Scientifico Statale Antonio Gramsci - Firenze
-			| #[time(datetime='2010') 2010] - #[time(datetime='2015') 2015]
 
 block skills
 	h3 Backend
 	p
 		| I am very familiar with the #[em PHP] language, which I have used to develop countless projects. The frameworks I've worked with most frequently are #[em Symfony] and #[em Laravel].
-		<br>
-		| I know the #[em NodeJS] ecosystem well, I have used #[em Express] for several projects and lately I have used the #[em Deno] runtime for some small software.
-		<br>
+		br
+		| I know the #[em NodeJS] ecosystem well, I have used #[em Express] for several projects and lately I have also used #[em Deno] for some microservices.
+		br
 		| I also used #[em Java] mainly for API development, especially with the #[em Spring] framework.
 	p
-		| The #[em DBMS] I've worked with the most are #[em PostgreSQL] and #[em MySQL], but on more than one occasion I've also used #[em SQLite] for small projects and embedded systems.
+		| The #[abbr(title='DataBase Management System') DBMS] I've worked with the most are #[em PostgreSQL] and #[em MySQL], but on more than one occasion I've also used #[em SQLite] for small projects and embedded systems.
 		br
 		| I happened to use #[em Redis] as a persistence system for some real-time collaborative applications.
-	p
-		| I know #[em Telegram] Bot APIs very well, having used them in different circumstances for the development of chatbots.
-	p
-		I have had the opportunity to work extensively with #[em Python] not only in some projects related to #[abbr(title="Artificial Intelligence") AI], but especially recently thanks to THE CTF, an area in which Python is the de facto scripting language of choice; its conciseness makes it particularly suitable for systematically coding exploits, so knowing it fluently is an almost indispensable requirement.
+		br 
+		| Lately I'm experimenting with document-oriented solutions like #[em MongoDB] and serverless technologies like the #[em Firebase] suite.
+	p I developed a dozen #[em Telegram] bots.
+	p I work daily with #[em Python], an indispensable language for CTF but also used for some projects related to #[abbr(title='Artificial Intelligence') AI], in particular with the Keras framework.
 
 	h3 Frontend
 	p
-		| #[em HTML], #[em CSS] and #[em JavaScript] cannot be missing in the knowledge of a web developer. I pay close attention to the semantics of HTML elements (also useful from an #[em #[abbr(title="Search Engine Optimization") SEO]] perspective that is often overlooked), and I try to be as up-to-date as possible on new introductions in these languages.
+		| #[em HTML], #[em CSS] and #[em JavaScript] cannot be missing from the knowledge of a web developer. I like to pay close attention to the semantically correct use of HTML elements and #[a(href='https://www.a11yproject.com/' target="_blank") A11y] standards, not only for #[abbr(title='Search Engine Optimization') SEO] reasons but above all for a more accessible web for those who browse with alternative technologies such as screen readers.
 		br
-		| I strongly maintain that there is far <strong>too much JavaScript</strong> on today's web, and that we developers need to be more aware of current web technologies to avoid misusing the tools at our disposal (there is not a single line of JavaScript on this page!).
-	p
-		| For some highly interactive projects, I used the #[em Svelte] framework.
+		| I firmly maintain that in today's web there is #[strong too much JavaScript] (on this page there is not even a line: #[a(href='https://github.com/danieleambrosino/personal-website' target="_blank") go for it]!).
+	p For some highly interactive projects, I used #[em SvelteKit] and #[em SolidJS].
