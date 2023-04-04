@@ -60,11 +60,22 @@ body {
 h1,
 h2,
 h3 {
-	margin: 0;
+	margin-block: calc(var(--space) / 2);
 }
 
 a {
 	color: inherit;
+}
+
+a.cta {
+    display: block;
+    background-color: var(--color-text);
+    color: var(--color-background);
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.25em;
+    padding: calc(var(--space) / 2);
 }
 
 nav {
@@ -102,6 +113,20 @@ section li {
 
 time {
 	font-size: smaller;
+}
+
+.icons {
+	display: flex;
+	gap: var(--space);
+	flex-wrap: wrap;
+}
+
+.icons svg {
+	flex-basis: 3rem;
+}
+
+.icons svg path {
+	fill: var(--color-text);
 }
 
 footer {
