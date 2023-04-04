@@ -4,7 +4,7 @@ html(lang=`${locale}`)
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		meta(name="description" content=`${__("description")}`)
-		title Daniele Ambrosino
+		title #{__("title")}
 		link(rel="shortcut icon" href="icon.svg" type="image/svg+xml")
 		style
 			include style.css
@@ -13,7 +13,7 @@ html(lang=`${locale}`)
 			h1
 				| Daniele Ambrosino
 				br
-				small Software Engineer
+				small #{__("jobTitle")}
 			address
 				a(href="mailto:mail@danieleambrosino.it") Email
 				|  • 
