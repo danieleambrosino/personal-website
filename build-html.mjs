@@ -12,15 +12,6 @@ const resourcesDir = join(rootDir, "resources");
 const localesDir = join(rootDir, "locales");
 const publicDir = join(rootDir, "public");
 
-const htmlMinifierOptions = {
-	collapseBooleanAttributes: true,
-	collapseWhitespace: true,
-	minifyCSS: true,
-	removeAttributeQuotes: true,
-	removeComments: true,
-	removeTagWhitespace: true,
-};
-
 const locales = ["it", "en"];
 
 // @ts-ignore
@@ -65,7 +56,14 @@ function renderHtml(locale) {
  * @returns {string}
  */
 function minifyHtml(html) {
-	return minify(html, htmlMinifierOptions);
+	return minify(html, {
+		collapseBooleanAttributes: true,
+		collapseWhitespace: true,
+		minifyCSS: true,
+		removeAttributeQuotes: true,
+		removeComments: true,
+		removeTagWhitespace: true,
+	});
 }
 
 function updateCaddyfileStyleHash(html) {
