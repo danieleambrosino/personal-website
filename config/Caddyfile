@@ -1,5 +1,5 @@
 danieleambrosino.it {
-	root * /var/www/vhosts/danieleambrosino.it/www/public
+	root * /var/www/danieleambrosino.it/www/public
 
 	file_server {
 		index en.html
