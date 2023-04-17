@@ -1,0 +1,9 @@
+baseURL: 'https://danieleambrosino.it'
+languageCode: 'it'
+title: 'Daniele Ambrosino'
+languages:
+  it:
+    languageName: Italiano
+  en:
+    languageName: English
+defaultContentLanguage: it
