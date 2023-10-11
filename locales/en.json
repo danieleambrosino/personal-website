@@ -6,5 +6,9 @@
 	"experience": "Experience",
 	"education": "Education",
 	"skills": "Skills",
+	"languages": "Languages",
+	"technologies": "Tecnologie",
+	"databases": "Databases",
+	"tools": "Tools",
 	"vatCode": "VAT code"
 }

@@ -44,13 +44,6 @@
 	scroll-padding-top: var(--nav-height);
 }
 
-@media (prefers-color-scheme: light) {
-	:root {
-		--color-background: var(--color-light);
-		--color-text: var(--color-dark);
-	}
-}
-
 body {
 	max-width: var(--line-max-length);
 	margin: auto;

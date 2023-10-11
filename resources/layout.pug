@@ -44,41 +44,44 @@ html(lang=`${locale}`)
 
 			section#skills
 				h2= __("skills")
-				h3 Linguaggi e framework
+				h3= __("languages")
 				p.icons
 					include ../images/icons/php/php-plain.svg
-					include ../images/icons/symfony/symfony-original.svg
-					include ../images/icons/laravel/laravel-plain.svg
-					include ../images/icons/nodejs/nodejs-plain.svg
-					include ../images/icons/express/express-original.svg
-					include ../images/icons/denojs/denojs-original.svg
-					include ../images/icons/java/java-plain.svg
-					include ../images/icons/spring/spring-plain.svg
-					include ../images/icons/cplusplus/cplusplus-plain.svg
+					include ../images/icons/go/go-original-wordmark.svg
 					include ../images/icons/python/python-plain.svg
+					include ../images/icons/typescript/typescript-plain.svg
+					include ../images/icons/java/java-plain.svg
+					include ../images/icons/kotlin/kotlin-plain.svg
+					include ../images/icons/c/c-plain.svg
+					include ../images/icons/cplusplus/cplusplus-plain.svg
 					include ../images/icons/html5/html5-plain.svg
 					include ../images/icons/css3/css3-plain.svg
 					include ../images/icons/javascript/javascript-plain.svg
-					include ../images/icons/typescript/typescript-plain.svg
+				h3= __("technologies")
+				p.icons
+					include ../images/icons/symfony/symfony-original.svg
+					include ../images/icons/laravel/laravel-plain.svg
+					include ../images/icons/fastapi/fastapi-original.svg
+					include ../images/icons/nodejs/nodejs-plain.svg
+					include ../images/icons/denojs/denojs-original.svg
+					include ../images/icons/express/express-original.svg
+					include ../images/icons/spring/spring-plain.svg
 					include ../images/icons/svelte/svelte-plain.svg
-					include ../images/icons/kotlin/kotlin-plain.svg
-				h3 Database
+				h3= __("databases")
 				p.icons
 					include ../images/icons/postgresql/postgresql-plain.svg
 					include ../images/icons/mysql/mysql-plain.svg
 					include ../images/icons/sqlite/sqlite-plain.svg
 					include ../images/icons/redis/redis-plain.svg
 					include ../images/icons/mongodb/mongodb-plain.svg
-					include ../images/icons/firebase/firebase-plain.svg
-				h3 Strumenti e sistemi
+				h3= __("tools")
 				p.icons
 					include ../images/icons/git/git-plain.svg
+					include ../images/icons/github/github-original.svg
+					include ../images/icons/firebase/firebase-plain.svg
 					include ../images/icons/nginx/nginx-original.svg
 					include ../images/icons/docker/docker-plain.svg
-					include ../images/icons/debian/debian-plain.svg
-					include ../images/icons/ansible/ansible-plain.svg
 					include ../images/icons/vscode/vscode-plain.svg
-
 
 		footer
 			| &copy; Daniele Ambrosino 2022-2023
