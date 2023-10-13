@@ -11,12 +11,11 @@ danieleambrosino.it {
 
 	header {
 		Strict-Transport-Security max-age=31536000
-		Vary Accept-Language
-		Content-Security-Policy "default-src 'self'; style-src 'sha256-h0d2LY7sF/b6V1J0BMKFPX8VLGGN8QVn+WrGIBBewYs='"
+		Content-Security-Policy "default-src 'self'; style-src 'sha256-1nHXW+cZFj8aTkC+RjDGDVdqguexHaATNcx4ayrse0k='"
 	}
 	header @assets Cache-Control max-age=31536000
 
-	encode gzip
+	encode br
 }
 
 www.danieleambrosino.it {
