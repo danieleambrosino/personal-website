@@ -6,6 +6,7 @@ import { dirname, join } from "path";
 import { renderFile } from "pug";
 import postcss from "postcss";
 import postcssNesting from "postcss-nesting";
+import postcssMinify from "postcss-minify";
 
 const rootDir = dirname(new URL(import.meta.url).pathname);
 const configDir = join(rootDir, "config");
@@ -39,7 +40,7 @@ function getRawCSS() {
  */
 function processCSS(css) {
 	// @ts-ignore
-	return postcss([postcssNesting()]).process(css).css;
+	return postcss([postcssNesting(), postcssMinify()]).process(css).css;
 }
 
 /**
@@ -66,7 +67,6 @@ function minifyHtml(html) {
 	return minify(html, {
 		collapseBooleanAttributes: true,
 		collapseWhitespace: true,
-		minifyCSS: true,
 		removeAttributeQuotes: true,
 		removeComments: true,
 		removeTagWhitespace: true,
