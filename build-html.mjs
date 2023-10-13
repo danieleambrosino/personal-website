@@ -1,54 +1,61 @@
 import { compress } from "brotli";
 import { readFileSync, writeFileSync } from "fs";
 import { minify } from "html-minifier";
-import { I18n } from "i18n";
 import { createHash } from "node:crypto";
 import { dirname, join } from "path";
 import { renderFile } from "pug";
+import postcss from "postcss";
+import postcssNesting from "postcss-nesting";
 
 const rootDir = dirname(new URL(import.meta.url).pathname);
 const configDir = join(rootDir, "config");
 const resourcesDir = join(rootDir, "resources");
-const localesDir = join(rootDir, "locales");
 const publicDir = join(rootDir, "public");
 
-const locales = ["it", "en"];
+buildHTML();
 
-// @ts-ignore
-const i18n = new I18n({
-	locales,
-	directory: localesDir,
-});
-
-buildHtml(locales);
-
-/**
- * @param {string[]} locales 
- */
-function buildHtml(locales) {
-	locales.forEach((locale, index) => {
-		const renderedHtml = renderHtml(locale);
-		const minifiedHtml = minifyHtml(renderedHtml);
-		writeFileSync(join(publicDir, `${locale}.html`), minifiedHtml);
-		if (index === 0) {
-			updateCaddyfileStyleHash(minifiedHtml);
-		}
-
-		const compressedHtml = brotliCompress(minifiedHtml);
-		writeFileSync(join(publicDir, `${locale}.html.br`), compressedHtml);
-	});
+function buildHTML() {
+	const rawCss = getRawCSS();
+	const processedCss = processCSS(rawCss);
+	const renderedHtml = renderHTML(processedCss);
+	const minifiedHtml = minifyHtml(renderedHtml);
+	writeFileSync(join(publicDir, "index.html"), minifiedHtml);
+	const compressedHtml = brotliCompress(minifiedHtml);
+	writeFileSync(join(publicDir, "index.html.br"), compressedHtml);
+	const styleHash = getStyleHash(processedCss);
+	updateCaddyfileStyleHash(styleHash);
 }
 
 /**
- * @param {string} locale
  * @returns {string}
  */
-function renderHtml(locale) {
-	i18n.setLocale(locale);
-	return renderFile(join(resourcesDir, `${locale}.pug`), {
-		locale,
-		__: i18n.__.bind(i18n)
-	});
+function getRawCSS() {
+	return readFileSync(join(resourcesDir, "style.css")).toString();
+}
+
+/**
+ * @param {string} css 
+ * @return {string}
+ */
+function processCSS(css) {
+	// @ts-ignore
+	return postcss([postcssNesting()]).process(css).css;
+}
+
+/**
+ * @param {string} css 
+ * @returns {string}
+ */
+function getStyleHash(css) {
+	return createHash("sha256").update(css).digest("base64");
+}
+
+/**
+ * @param {string} css 
+ * @returns {string}
+ */
+function renderHTML(css) {
+	return renderFile(join(resourcesDir, "index.pug"), { css });
 }
 
 /**
@@ -59,26 +66,20 @@ function minifyHtml(html) {
 	return minify(html, {
 		collapseBooleanAttributes: true,
 		collapseWhitespace: true,
-		minifyCSS: true,
 		removeAttributeQuotes: true,
 		removeComments: true,
 		removeTagWhitespace: true,
 	});
 }
 
-function updateCaddyfileStyleHash(html) {
-	const styleHash = getStyleHash(html);
-	const caddyfile = join(configDir, "Caddyfile");
-	const caddyfileContent = readFileSync(caddyfile, "utf8");
-	const caddyfileContentWithHash = caddyfileContent.replace(/style-src '.*?'/, `style-src 'sha256-${styleHash}'`);
-	writeFileSync(caddyfile, caddyfileContentWithHash);
-}
-
-function getStyleHash(html) {
-	const styleContent = html.match(/<style>(.+?)<\/style>/)[1];
-	const hash = createHash("sha256");
-	hash.update(styleContent);
-	return hash.digest("base64");
+/**
+ * @param {string} styleHash 
+ */
+function updateCaddyfileStyleHash(styleHash) {
+	const caddyfilename = join(configDir, "Caddyfile");
+	const caddyfileContent = readFileSync(caddyfilename, "utf8");
+	const updatedCaddyfileContent = caddyfileContent.replace(/style-src '.*?'/, `style-src 'sha256-${styleHash}'`);
+	writeFileSync(caddyfilename, updatedCaddyfileContent);
 }
 
 /**
@@ -86,7 +87,5 @@ function getStyleHash(html) {
  * @returns {Uint8Array}
  */
 function brotliCompress(inputText) {
-	return compress(Buffer.from(inputText), {
-		mode: 1,
-	})
+	return compress(Buffer.from(inputText), { mode: 1 })
 }

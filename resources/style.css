@@ -79,15 +79,17 @@ nav {
 	align-items: center;
 	height: var(--nav-height);
 	overflow-x: auto;
+	
+	& a {
+		flex-shrink: 0;
+
+		&:not(:first-child) {
+			margin-left: var(--space);
+		}
+	}
 }
 
-nav a {
-	flex-shrink: 0;
-}
 
-nav a:not(:first-child) {
-	margin-left: var(--space);
-}
 
 picture {
 	float: left;
@@ -98,6 +100,16 @@ picture {
 p {
 	text-align: justify;
 	line-height: 1.5em;
+}
+
+section#brands {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: calc(var(--space)*3);
+
+	& img {
+		width: 100%;
+	}
 }
 
 section li {
@@ -112,14 +124,14 @@ time {
 	display: flex;
 	gap: var(--space);
 	flex-wrap: wrap;
-}
-
-.icons svg {
-	flex-basis: 3rem;
-}
-
-.icons svg path {
-	fill: var(--color-text);
+	
+	& svg {
+		flex-basis: 3rem;
+		
+		& path {
+			fill: var(--color-text);
+		}
+	}
 }
 
 footer {
