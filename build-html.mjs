@@ -66,6 +66,7 @@ function minifyHtml(html) {
 	return minify(html, {
 		collapseBooleanAttributes: true,
 		collapseWhitespace: true,
+		minifyCSS: true,
 		removeAttributeQuotes: true,
 		removeComments: true,
 		removeTagWhitespace: true,
