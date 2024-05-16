@@ -1,16 +1,16 @@
 doctype html
-html(lang="it")
+html(lang="en")
 	head
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
-		meta(name="description" content="Ingegnere informatico, sviluppatore full stack, giocatore di CTF, sistemista. Contattami per il tuo prossimo progetto!")
-		title Daniele Ambrosino - Ingegnere Informatico
+		meta(name="description" content="Software engineer, backend developer, Linux enthusiast, security advocate. Trying to make the world a better place, one app at a time. Let's get in touch!")
+		title Daniele Ambrosino - Software Engineer
 		link(rel="shortcut icon" href="icon.svg" type="image/svg+xml")
 		style !{css}
 	body
 		header
 			h1 Daniele Ambrosino
-			h2 Ingegnere informatico
+			h2 Software Engineer
 			address
 				a(href="mailto:mail@danieleambrosino.it") Email
 				|  • 
@@ -18,119 +18,13 @@ html(lang="it")
 				|  • 
 				a(target="_blank" href="https://www.linkedin.com/in/daniele-ambrosino/") LinkedIn
 
-		nav
-			a(href='#about') Chi sono
-			a(href='#experience') Esperienze
-			a(href='#education') Formazione
-			a(href='#skills') Competenze
-
 		main
-			section#about
-				h2 Chi sono
-				picture
-					source(srcset='/images/profile.avif' type='image/avif')
-					source(srcset='/images/profile.webp' type='image/webp')
-					img(src='/images/profile.jpeg' width='144' height='144' alt='Foto profilo')
-				p Sono un ingegnere informatico con quasi 10 anni di esperienza nel mondo del web, con una particolare passione per lo sviluppo backend e la progettazione di architetture software. Nella mia carriera ho progettato, sviluppato o coordinato più di 50 progetti, dai più semplici siti vetrina a complessi sistemi commerciali e gestionali per grandi aziende.
-				p Performance, best practice di sviluppo, pulizia del codice e attenzione ai dettagli sono tratti distintivi della mia filosofia di lavoro. Mi dedico costantemente a restare aggiornato sulle ultime tecnologie e tendenze del settore per poter offrire soluzioni software innovative e di altissima qualità che superino le aspettative dei clienti.
-				p In seconda media mio padre mi regalò il mio primo computer portatile, un vecchio Compaq aziendale: era così lento che non reggeva neanche Windows 2000. Tuttavia, questo evento segnò l'inizio del mio interesse per i sistemi operativi, poiché decisi di sperimentare con Ubuntu 8, che alimentò la mia profonda passione per gli ambienti operativi Unix-like.
-				p Grazie al progetto #[a(target='_blank' rel='noopener' href='https://cyberchallenge.it/') CyberChallenge.IT], ho scoperto il mondo della cybersecurity e delle competizioni #[abbr(title='Capture The Flag') CTF]. Mi sto attualmente specializzando in Software Engineering &amp; Cybersecurity presso il Politecnico di Milano.
-				p Hai un progetto in mente che vorresti realizzare? #[a.cta(href='mailto:mail@danieleambrosino.it') Contattami e parliamone insieme!]
-
-			section#experience
-				h2 Esperienze
-				ul
-					li
-						h3 Vincitore del Mastertech 2019
-						div VarGroup
-						time(datetime='2019-05-15') 15/05/2019
-						p Hackathon nazionale sponsorizzato da Microsoft e Amazon.
-					li
-						h3 Senior Software Engineer
-						div Amore &amp; Vasaturo
-						| #[time(datetime='2022-01') gennaio 2022] - #[time oggi]
-						p Software architect e sviluppatore; reviewer di performance, architettura e sicurezza; tutor di una risorsa junior.
-					li
-						h3 Chief Technology Officer
-						div Tipso
-						| #[time(datetime='2020-11') novembre 2020] - #[time oggi]
-						p Coordinamento, design e sviluppo di un'app di consulenza in ambito moda.
-					li
-						h3 Sviluppatore Full Stack
-						div Bidoo
-						| #[time(datetime='2020-05') maggio 2020] - #[time(datetime='2020-10') ottobre 2020]
-						p Sviluppo di una piattaforma e-commerce avanzata parallela al sistema di aste.
-					li
-						h3 Software Architect
-						div Rankingoal
-						| #[time(datetime='2020-07') luglio 2020] - #[time(datetime='2021-01') gennaio 2021]
-						p Progettazione, coordinamento e sviluppo di una piattaforma SaaS per la Search Engine Optimization.
-					li
-						h3 Presidente della commissione informatica e comunicazione
-						div Rotaract Distretto 2071
-						| #[time(datetime='2021-07') luglio 2021] - #[time(datetime='2022-07') luglio 2022]
-
-			section#education
-				h2 Formazione
-				ul
-					li
-						h3
-							| Laurea Magistrale in Computer Science and Engineering
-							br
-							| Track di Cybersecurity
-						div Politecnico di Milano
-					li
-						h3 Finalista nazionale di #[a(target='_blank' rel='noopener' href='https://cyberchallenge.it/') CyberChallenge.IT]
-					li
-						h3 Studente della Cyber Security Academy
-						div Politecnico di Milano
-					li
-						h3 Laurea Triennale in Ingegneria Informatica
-						div Università degli Studi di Firenze
-					li
-						h3 Diploma di Liceo Scientifico
-						div Liceo Scientifico Statale Antonio Gramsci - Firenze
-
-			section#skills
-				h2 Competenze
-				h3 Linguaggi
-				p.icons
-					include ../images/icons/php/php-plain.svg
-					include ../images/icons/go/go-original-wordmark.svg
-					include ../images/icons/python/python-plain.svg
-					include ../images/icons/typescript/typescript-plain.svg
-					include ../images/icons/java/java-plain.svg
-					include ../images/icons/kotlin/kotlin-plain.svg
-					include ../images/icons/c/c-plain.svg
-					include ../images/icons/cplusplus/cplusplus-plain.svg
-					include ../images/icons/html5/html5-plain.svg
-					include ../images/icons/css3/css3-plain.svg
-					include ../images/icons/javascript/javascript-plain.svg
-				h3 Tecnologie
-				p.icons
-					include ../images/icons/symfony/symfony-original.svg
-					include ../images/icons/laravel/laravel-original.svg
-					include ../images/icons/fastapi/fastapi-original.svg
-					include ../images/icons/nodejs/nodejs-plain.svg
-					include ../images/icons/denojs/denojs-original.svg
-					include ../images/icons/express/express-original.svg
-					include ../images/icons/spring/spring-original.svg
-					include ../images/icons/svelte/svelte-plain.svg
-				h3 Database
-				p.icons
-					include ../images/icons/postgresql/postgresql-plain.svg
-					include ../images/icons/mysql/mysql-original.svg
-					include ../images/icons/sqlite/sqlite-plain.svg
-					include ../images/icons/redis/redis-plain.svg
-					include ../images/icons/mongodb/mongodb-plain.svg
-				h3 Strumenti
-				p.icons
-					include ../images/icons/git/git-plain.svg
-					include ../images/icons/github/github-original.svg
-					include ../images/icons/firebase/firebase-plain.svg
-					include ../images/icons/nginx/nginx-original.svg
-					include ../images/icons/docker/docker-plain.svg
-					include ../images/icons/vscode/vscode-plain.svg
+			img(src="/images/profile.webp" alt="Foto profilo" width="144" height="144")
+			p Hi! I'm Daniele, a computer engineer and musician (so I like to believe) born in Naples, raised in Florence and currently living in Milan. I have #[b 10 years of experience in software development], with a focus on backend engineering, software architecture design and database optimization. In my career I have designed, developed or coordinated more than 50 projects, from the simplest showcase sites to complex commercial and management systems for large companies.
+			p Performance, best practices, high quality code and attention to detail are hallmarks of my work philosophy. A curious tinkerer at heart with a #[b strong background in Linux systems], I am constantly dedicated to staying up-to-date on the latest technologies and trends in the industry in order to be able to offer #[b innovative, robust, scalable and secure] software solutions that exceed customer expectations.
+			p In the last several years I had the opportunity to manage, coordinate and motivate many work groups, which allowed me to refine my #[b teamwork and leadership skills], not only at work but also in associations. <br> I firmly believe that each of us can make a difference in the world and should do our best to help improve society, which is why I have been an active member of #[b Rotaract] since 2018. Among the many roles held, I've served as the #[b Head of IT] for District 2071 (Tuscany) and I have been honored as a Paul Harris Fellow, #[b Rotary International's highest acknowledgement], thanks to the technological initiatives undertaken particularly during the pandemic period.
+			p Are you a company looking for a Senior Software Engineer? A startup ready to change the world? Or an association willing to help the community through innovation?
+			p.buttons #[a.cta(href='mailto:mail@danieleambrosino.it') Let's get in touch! ✉️] #[a.cta(href="/resume.pdf" download="Daniele_Ambrosino_Resume.pdf") Get my resume ⬇️]
 
 		footer
 			| &copy; Daniele Ambrosino 2022-2024
