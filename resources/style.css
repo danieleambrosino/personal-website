@@ -34,9 +34,6 @@
 	color-scheme: dark;
 	background-color: var(--color-background);
 	color: var(--color-text);
-
-	scroll-behavior: smooth;
-	scroll-padding-top: var(--nav-height);
 }
 
 body {

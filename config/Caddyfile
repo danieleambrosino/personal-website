@@ -11,7 +11,7 @@ danieleambrosino.it {
 
 	header {
 		Strict-Transport-Security max-age=31536000
-		Content-Security-Policy "default-src 'self'; style-src 'sha256-obaKsCWGig11n+R1NLbsdaFdGSlaJkAiYSv7+Qp7wsQ='"
+		Content-Security-Policy "default-src 'self'; style-src 'sha256-2+j+9lK6VjjeUJ4x1A1fApG91YSYn52HxZNKyXu3m24='"
 	}
 	header @assets Cache-Control max-age=31536000
 
