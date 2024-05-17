@@ -9,7 +9,7 @@
 		"pug": "^3.0.2"
 	},
 	"scripts": {
-		"build": "node build-html.mjs"
+		"build": "node build-html.js"
 	},
 	"type": "module"
 }
