@@ -22,7 +22,7 @@
 
 	--border-radius: 5px;
 
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', system-ui, sans-serif;
 
 	color-scheme: dark;
 	background-color: var(--color-background);
